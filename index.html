@@ -91,17 +91,26 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
-                src="./img/nat-1-large.jpg"
+                srcset="./img/nat-1.jpg 300w, ./img/nat-1-large 1000w"
+                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
                 alt="Photo 1"
                 class="composition__photo composition__photo--1"
-              /><img
-                src="./img/nat-2-large.jpg"
+                src="./img/nat-1-large.jpg"
+              />
+              <!--size of the image / screen width-->
+              <img
+                srcset="./img/nat-2.jpg 300w, ./img/nat-2-large 1000w"
+                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
                 alt="Photo 2"
                 class="composition__photo composition__photo--2"
-              /><img
-                src="./img/nat-3-large.jpg"
+                src="./img/nat-2-large.jpg"
+              />
+              <img
+                srcset="./img/nat-3.jpg 300w, ./img/nat-3-large 1000w"
+                sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
                 alt="Photo 3"
                 class="composition__photo composition__photo--3"
+                src="./img/nat-3-large.jpg"
               />
             </div>
           </div>
@@ -379,11 +388,27 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="./img/logo-green-2x.png"
+        <!-- 2nd method Image resolution making image responsive-->
+        <picture class="footer__logo"
+          ><source
+            srcset="
+              ./img/logo-green-small-1x.png 1x,
+              ./img/logo-green-small-2x.png 2x
+            "
+            media="(max-width:37.5em)"
+          />
+          <img
+            srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x"
+            alt="full logo"
+            src="./img/logo-green-2x.png"
+          />
+        </picture>
+        <!-- 1st method Image resolution making image responsive-->
+        <!-- <img
+          srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x"
           alt="full logo"
           class="footer__logo"
-        />
+        /> -->
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -442,13 +467,7 @@
             id interdum velit laoreet id donec. Morbi quis commodo odio aenean
             sed. Et leo duis ut diam quam nulla porttitor massa. Nunc sed velit
             dignissim sodales ut eu. Sed risus ultricies tristique nulla aliquet
-            enim tortor. Ut pharetra sit amet aliquam id. Netus et malesuada
-            fames ac. Tortor pretium viverra suspendisse potenti nullam. Nunc
-            pulvinar sapien et ligula ullamcorper. Morbi tristique senectus et
-            netus et malesuada. Vulputate enim nulla aliquet porttitor lacus
-            luctus. Donec adipiscing tristique risus nec feugiat. Ultrices
-            sagittis orci a scelerisque purus. Justo laoreet sit amet cursus sit
-            amet dictum. Id nibh tortor id aliquet.
+            enim tortor. Ut pharetra sit amet aliquam id.
           </p>
           <a href="#" class="btn btn--green">Book Now</a>
         </div>
